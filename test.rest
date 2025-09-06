@@ -1,0 +1,33 @@
+@baseUrl = http://localhost:8080
+
+###
+
+GET {{baseUrl}}/todos HTTP/1.1
+
+###
+
+POST {{baseUrl}}/todos HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Todo 2",
+    "descricao": "Desc Todo 2",
+    "prioridade": 2
+}
+
+###
+
+PUT {{baseUrl}}/todos HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "nome": "Todo 1 Up",
+    "descricao": "Desc Todo Up",
+    "prioridade": 3,
+    "realizado": true
+}
+
+###
+
+DELETE {{baseUrl}}/todos/1 HTTP/1.1
